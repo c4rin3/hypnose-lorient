@@ -1,0 +1,434 @@
+@charset "UTF-8";
+/* CSS Style for Johanna Guénal-Ducournau by Carine Bigot - http://c4rin3.virtuelles.fr - 2012 */
+/* ----------------- Global reset ----------------- */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video  { 
+margin : 0; 
+padding : 0; 
+border : 0; 
+font-size : 100%; 
+font : inherit; 
+vertical-align : baseline; 
+ }
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+ol, ul {
+	list-style: none;
+}
+/* ----------------- Extended base styles (site specific) ----------------- */
+html { 
+	overflow-y: scroll;
+	}
+body {
+	background-image : url('../img/lightpaperfibers.jpg');
+	background-attachment:fixed;
+	overflow-x: hidden;
+	height: 8100px;
+	line-height: 1.4;
+	font-family: 'Imprima', Trebuchet MS, Helvetica, Arial, sans-serif;
+    font-size: 15px;
+    color: rgb(68, 68, 68);
+    font-weight: 400;
+}
+a, a:link, a:active, a:visited {
+	color:#000;
+	outline: none;
+	text-decoration:none;
+}
+a:hover { 
+	color:#000;
+}
+img { 
+	display:block;
+}
+p {
+	margin:1em 0;
+}
+hr {
+	margin:0;
+	border:1px dotted #942b6c;
+	border-width:1px 0 0 0; 
+	height:0;
+}
+.name {
+	text-transform: uppercase;
+}
+/* ----------------- Page structure ----------------- */
+#container {
+	position: relative;
+}
+#branding {
+	width: 100%;
+	height:125px;
+	background-image : url('../img/washi.png');
+	background-repeat:repeat-x;
+	position: fixed;
+	z-index: 6;
+	}
+	#branding #entete {
+		max-width: 940px;
+		margin: 0 auto;
+		padding: 10px;
+		border: solid transparent;
+		border-width: 0px 20px 7px;
+		-moz-border-image: url('../img/wave.png') 0 20 7 round ;
+		-webkit-border-image: url('../img/wave.png') 0 20 7 round ;
+		-o-border-image: url('../img/wave.png') 0 20 7 round ;
+		border-image: url('../img/wave.png') 0 20 7 round ;
+ 	}
+	#branding #entete .col1, #branding #entete .col2 {
+		display: inline-block;
+		color:#942b6c;
+		}
+	#branding #entete .col1 {
+		vertical-align:top;
+		padding-right:140px;
+	}
+	#branding #entete .col1 h1 {
+		text-transform: uppercase;
+		font-family: 'Merienda One', Georgia, Times New Roman, serif;
+		font-size: 24px;
+		font-weight: 500;
+	}
+	#branding #entete .col2 h2 {
+		font-size: 16px;
+	}
+#branding a, a:link, a:active, a:visited {
+	color: #76b301;
+	outline: none;
+	text-decoration:none;
+	}
+#branding a:hover {
+	color:#942b6c;
+	outline: none;
+	text-decoration:none;
+	}
+/* ----------------- Nav ----------------- */
+nav#primary {
+	z-index: 5;
+	position: fixed;
+	top: 50%;
+	right: 16px;
+	margin-top: -40px;
+}
+nav#primary li {
+	position: relative;
+	height: 20px;
+}
+nav#primary a {
+	display: block;
+	width: 20px;
+	height: 20px;
+	text-indent: -9999px;
+	background: transparent url('../img/nav-dot.png') 4px 4px no-repeat;
+}
+nav#primary a:hover, nav#primary a.active {
+	background: transparent url('../img/nav-dot.png') 4px -16px no-repeat;
+}
+nav#primary h1 {
+	position: absolute;
+	right: 22px;
+	top: -7px;
+	display: none;
+	padding: 4px 20px 4px 7px;;
+	color: #fff;
+	white-space: nowrap;
+	background: transparent url('../img/nav-arrow.png') 100% 50% no-repeat;
+	}
+nav.next-prev {
+	margin: 20px 0 0 0;
+	}
+	a.prev, a.next {
+		display: block;
+		width: 15px;
+		height: 11px;
+		text-indent: -9999px;
+		}
+	a.prev {
+		margin: 0 auto 5px auto;
+		background: transparent url('../img/scroll-arrow-up.png') 0 0 no-repeat;
+		}
+		a.prev:hover {
+			background: transparent url('../img/scroll-arrow-up.png') 0 -11px no-repeat;
+			}
+	a.next {
+		margin: 5px auto 0 auto;
+		background: transparent url('../img/scroll-arrow-down.png') -1px 0 no-repeat;
+		}
+		a.next:hover {
+			background: transparent url('../img/scroll-arrow-down.png') -1px -11px no-repeat;
+			}
+/* ----------------- Parallax ----------------- */
+#content {
+	z-index: 4;
+	position: relative;
+	max-width: 940px;
+	margin: 0 auto;
+	}
+	#content article {
+		width: 400px;
+		}
+	#accueil, #parcours, #historique, #deroulement, #origine, #definitionEMDR, #quetraiter, #articles {
+		margin-top: 105px;
+		}
+	#accueil {
+		position: absolute;
+		top: 0px;
+		}
+	#parcours {
+		position: absolute;
+		top: 1090px;
+		}
+	#historique {
+		position: absolute;
+		top: 2180px;
+		}
+	#deroulement {
+		position: absolute;
+		top: 3270px;
+		}
+	#origine {
+		position: absolute;
+		top: 4360px;
+		}
+	#definitionEMDR {
+		position: absolute;
+		top: 5450px;
+		}
+	#quetraiter {
+		position: absolute;
+		top: 6540px;
+		}
+	#articles {
+		position: absolute;
+		top: 7630px;
+		}
+#content ul{
+	padding-left: 13px;
+	list-style: disc outside
+	}
+#content h1 {
+	font-family: 'Merienda One', Georgia, Times New Roman, serif;
+	font-size: 24px;
+	font-weight: 500;
+	color: #942b6c;
+	text-align:center;
+	}
+#content p {
+	text-align : justify;
+	word-wrap: break-word;
+	-webkit-hyphens: auto;
+	-moz-hyphens: auto;
+	-ms-hyphens: auto;
+	-o-hyphens: auto;
+	hyphens: auto;
+	}
+#bg3-0 img, #bg3-1 img, #bg3-2 img, #bg3-3 img, #bg3-4 img, #bg3-5 img,
+#bg2-1 img, #bg2-2 img, #bg2-3 img, #bg2-4 img {
+	max-width: 100%;
+	height: auto;
+}
+/* Pictures */
+#parallax-bg3 {
+	z-index: 3;
+	position: fixed;
+	left: 50%;
+	top: 0;
+	max-width: 940px;
+	margin-left: -470px;
+	}
+	#bg3-0 {
+		position: absolute;
+		top: 160px;
+		left: 550px;
+		}
+	#bg3-1 {
+		position: absolute;
+		top: 975px;
+		left: 550px;
+		}
+	#bg3-2 {
+		position: absolute;
+		top: 1790px;
+		left: 550px;
+		}
+	#bg3-3 {
+		position: absolute;
+		top: 2610px;
+		left: 550px;
+		}
+	#bg3-4 {
+		position: absolute;
+		top: 2890px;
+		left: 550px;
+		}
+	#bg3-5 {
+		position: absolute;
+		top: 3425px;
+		left: 550px;
+		}
+
+/* flowers01 */
+#parallax-bg2 {
+	z-index: 2;
+	position: fixed;
+	left: 50%;
+	top: 0;
+	max-width: 1200px;
+	margin-left: -600px;
+	}
+	#bg2-1 {
+		position: absolute;
+		top: 200px;
+		left: -50px;
+		}
+	#bg2-2 {
+		position: absolute;
+		top: 1600px;
+		left: 950px;
+		}
+	#bg2-3 {
+		position: absolute;
+		top: 3100px;
+		left: 650px;
+		}
+	#bg2-4 {
+		position: absolute;
+		top: 3750px;
+		left: 300px;
+		}
+/* flowers02 */
+#parallax-bg1 {
+	z-index: 1;
+	position: fixed;
+	left: 50%;
+	top: 0;
+	max-width: 1200px;
+	margin-left: -600px;
+	}
+	#bg1-1 {
+		position: absolute;
+		top: 620px;
+		left: 565px;
+		}
+	#bg1-2 {
+		position: absolute;
+		top: 1480px;
+		left: -35px;
+		}
+	#bg1-3 {
+		position: absolute;
+		top: 1800px;
+		left: 950px;
+		}
+#footer {
+	width: 100%;
+	position: absolute;
+	height:15px;
+	top: 8065px;
+	padding: 0px 10px;
+	}
+	#footer #copyright {
+		margin: 0px auto;
+		max-width: 940px;
+		padding: 10px;
+		border-top:1px dotted #942b6c;
+	}
+	#footer #copyright p {
+		line-height:1;
+		margin:0;
+		font-size:14px;
+		color: rgb(100, 100, 100);
+	}
+/* ----------------- Web mobile ----------------- */
+@media (max-width: 1000px) {
+	#bg2-1, #bg2-2, #bg2-3, #parallax-bg1 {
+		display: none !important;
+	}
+	#branding #entete .col1 h1 {
+		font-size: 1.3em;
+		/*padding-right:0px;*/
+	}
+	#branding #entete .col2 h2 {
+		font-size: 0.9em;
+	}
+	#branding #entete .col2 h3 {
+		font-size: 0.8em;
+	}
+	#bg3-0, #bg3-1, #bg3-2, #bg3-3, #bg3-4, #bg3-5 {
+		max-width: 220px;
+		height: auto;
+	}
+}
+
+@media (max-width: 800px) {
+	body, #branding, #content, #footer {
+		width: 100%;
+		margin: 0;
+		padding: 0;
+		background:none;
+	}
+	p {
+		margin:0.4em 0;
+	}
+	img, table, td, blockquote, code, pre, textarea, input, iframe, object, embed, video {
+		max-width: 100%;
+	 }
+	textarea, table, td, th, code, pre, samp, p {
+		word-wrap: break-word; /* passage à la ligne forcé */
+		hyphens: auto;
+	}
+	code, pre, samp {
+		white-space: pre-wrap;
+	}
+	#branding #entete .col1, #branding #entete .col2 {
+		float: none;
+		width: 100%;
+	}
+	#branding #entete {
+		background:white;
+		border-bottom: 1px dotted #942b6c;
+		padding: 7px 7px;
+		border: solid transparent;
+		border-width: 0px 0px 7px;
+		-moz-border-image: url('../img/wave.png') 0 20 7 round ;
+		-webkit-border-image: url('../img/wave.png') 0 20 7 round ;
+		-o-border-image: url('../img/wave.png') 0 20 7 round ;
+		border-image: url('../img/wave.png') 0 20 7 round ;
+	}
+	#branding #entete .col1 h1 {
+		font-size: 1em;
+		text-align:center;
+	}
+	#branding #entete .col2 h2 {
+		font-size: 0.9em;
+		text-align:center;
+	}
+	#branding #entete .col2 h3 {
+		font-size: 0.8em;
+		text-align:center;
+	}
+	#footer #copyright p {
+		font-size: 0.8em;
+	}
+	#content article {
+		width: auto;
+		padding: 0 4em;
+	}
+	#content article h1 {
+		font-size: 1.1em;
+	}
+	#content article p, li {
+		font-size: 0.9em;
+	}
+	#parallax-bg3, #parallax-bg2, #parallax-bg1, nav#primary a {
+		display: none !important;
+	}
+}
+
+@media (max-width: 500px) {
+	#content article {
+		width: auto;
+		padding: 0 1em;
+	}
+}
